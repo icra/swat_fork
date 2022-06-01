@@ -183,6 +183,7 @@
        character(len=25) :: urban_urb = "urban.urb"
        character(len=25) :: septic_sep = "septic.sep"
        character(len=25) :: snow = "snow.sno"
+       character(len=25) :: poll = "pollutants.def"
       end type input_parameter_databases
       type (input_parameter_databases) :: in_parmdb
 
