@@ -19,13 +19,13 @@
       eof = 0
       imax = 0
       
-      inquire (file=in_parmdb%poll, exist=i_exist)
-      if (.not. i_exist .or. in_parmdb%poll == "null") then
+      inquire (file=in_polldb%pollutant_pol, exist=i_exist)
+      if (.not. i_exist .or. in_polldb%pollutant_pol == "null") then
         allocate (polldb(0:0))
         allocate (pollcp(0:0))
       else
       do
-        open (106,file=in_parmdb%poll)
+        open (106,file=in_polldb%pollutant_pol)
         read (106,*,iostat=eof) titldum
         if (eof < 0) exit
         read (106,*,iostat=eof) header

@@ -35,6 +35,7 @@
           allocate (exco(0:imax))       !! change to exco_om         
           allocate (exco_om_num(0:imax))
           allocate (exco_om_name(0:imax))
+          
           rewind (107)
           read (107,*,iostat=eof) titldum
           if (eof < 0) exit
@@ -46,9 +47,10 @@
             read (107,*,iostat=eof) titldum
             if (eof < 0) exit
             backspace (107)
-            read (107,*,iostat=eof) exco_om_name(ii), exco(ii)   
+            read (107,*,iostat=eof) exco_om_name(ii), exco(ii)            
             if (eof < 0) exit
           end do
+
           close (107)
           exit
         end do

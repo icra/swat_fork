@@ -32,4 +32,4 @@
       end type pollutant_cp
       type (pollutant_cp), dimension(:), allocatable, save:: pollcp
       
-      end module pollutant_data_module 
+      end module pollutants_data_module 

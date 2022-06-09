@@ -20,6 +20,7 @@
           read (107,*,iostat=eof) titldum
           if (eof < 0) exit
           read (107,*,iostat=eof) header
+
           if (eof < 0) exit
           imax = 0
           do while (eof == 0)

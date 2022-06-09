@@ -173,19 +173,25 @@
       
 !! HRU databases
       type input_parameter_databases
-       character(len=25) :: plants_plt = "plants.plt"
-       character(len=25) :: fert_frt = "fertilizer.frt"
-       character(len=25) :: till_til = "tillage.til"
-       character(len=25) :: pest = "pesticide.pes"
-	   character(len=25) :: pathcom_db = "pathogens.pth"
-	   character(len=25) :: hmetcom_db = "metals.mtl"
-	   character(len=25) :: saltcom_db = "salt.slt"
-       character(len=25) :: urban_urb = "urban.urb"
-       character(len=25) :: septic_sep = "septic.sep"
-       character(len=25) :: snow = "snow.sno"
-       character(len=25) :: poll = "pollutants.def"
+        character(len=25) :: plants_plt = "plants.plt"
+        character(len=25) :: fert_frt = "fertilizer.frt"
+        character(len=25) :: till_til = "tillage.til"
+        character(len=25) :: pest = "pesticide.pes"
+	    character(len=25) :: pathcom_db = "pathogens.pth"
+	    character(len=25) :: hmetcom_db = "metals.mtl"
+	    character(len=25) :: saltcom_db = "salt.slt"
+        character(len=25) :: urban_urb = "urban.urb"
+        character(len=25) :: septic_sep = "septic.sep"
+        character(len=25) :: snow = "snow.sno"
       end type input_parameter_databases
       type (input_parameter_databases) :: in_parmdb
+      
+      !! Pollutant databases
+      type input_pollutant_databases
+        character(len=25) :: pollutant_pol = "pollutants.def"
+        character(len=25) :: pollutant_om = "pollutants_om.exc"
+      end type input_pollutant_databases
+      type (input_pollutant_databases) :: in_polldb
 
 !! operation scheduling
       type input_ops

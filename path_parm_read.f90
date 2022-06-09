@@ -20,6 +20,7 @@
       
       !! read pathogen properties
       inquire (file=in_parmdb%pathcom_db,exist=i_exist)
+               
       if (.not. i_exist .or. in_parmdb%pathcom_db == "null") then
          allocate (path_db(0:0))
       else
